@@ -1,0 +1,19 @@
+generated: '2026-07-20'
+method: searched
+host: https://pathai.com
+documents:
+- path: /.well-known/security.txt
+  status: 200
+  file: path-ai-security.txt
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+notes: >-
+  security.txt served on the apex host (pathai.com). The AISight SPA host
+  (aisight.pathai.com) returns HTTP 200 text/html for any /.well-known/ path
+  (SPA catch-all), so it was not treated as a real well-known surface.
